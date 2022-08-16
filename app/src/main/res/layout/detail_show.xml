@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="0dp">
+
+            <EditText
+                android:id="@+id/animal1"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/animal2"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/animal3"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/start1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task1_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/start2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task2_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/start3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task3_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/secret1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task1_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/secret2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task2_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/secret3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task3_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="留连"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task1_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="速喜"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task2_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="111" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="赤口"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task3_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/rowline"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000000"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="205dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="0dp">
+
+            <EditText
+                android:id="@+id/animal0"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/animal5"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/animal4"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/start0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task0_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/start5"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task5_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/start4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task4_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/secret0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task0_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/secret5"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task5_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/secret4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <EditText
+                android:id="@+id/task4_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="大安"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task0_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="空亡"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task5_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="120dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="3dp"
+                android:text="小吉"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/task4_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:layout_weight="1"
+                android:text="111"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
