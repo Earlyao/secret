@@ -39,7 +39,7 @@ class Group{
 
 
     public Animals animal;
-    public Secret star;
+    public String star;
     public Branch branch;
     public String palace;
     public String A;
@@ -64,6 +64,7 @@ public class DetailShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_show);
 
+        Toast toast;
         int i;
 
         Group group[] = new Group[6];
@@ -78,7 +79,7 @@ public class DetailShow extends AppCompatActivity {
             s[i].birth.sec = secr[(i + 1) % 5];
             s[i].hurt.sec = secr[(i + 2) % 5];
 
-            if(s[i].sec == ser[0])
+            if(s[i].sec == secr[0])
             {
                 s[i].branch_num = 2;
                 s[i].branch.add(branch1[4]);
@@ -87,7 +88,7 @@ public class DetailShow extends AppCompatActivity {
                 s[i].palace = palas[3];
             }
 
-            else if(s[i].sec == ser[1])
+            else if(s[i].sec == secr[1])
             {
                 s[i].branch_num = 2;
                 s[i].branch.add(branch1[0]);
@@ -96,7 +97,7 @@ public class DetailShow extends AppCompatActivity {
                 s[i].palace = palas[4];
             }
 
-            else if(s[i].sec == ser[2])
+            else if(s[i].sec == secr[2])
             {
                 s[i].branch_num = 2;
                 s[i].branch.add(branch1[1]);
@@ -105,7 +106,7 @@ public class DetailShow extends AppCompatActivity {
                 s[i].palace = palas[0];
             }
 
-            else if(s[i].sec == ser[3])
+            else if(s[i].sec == secr[3])
             {
                 s[i].branch_num = 2;
                 s[i].branch.add(branch1[3]);
@@ -114,7 +115,7 @@ public class DetailShow extends AppCompatActivity {
                 s[i].palace = palas[1];
             }
 
-            else if(s[i].sec == ser[4])
+            else if(s[i].sec == secr[4])
             {
                 s[i].branch_num = 4;
                 s[i].branch.add(branch1[2]);
@@ -158,6 +159,20 @@ public class DetailShow extends AppCompatActivity {
 
         Group content[] = new Group[6];
         int self = month + day + hour;
+        int base = self % 6;
+        content[base].B = "自身";
+        content[base].branch = b[hour/2];
+        for(i = 0; i < 5; i++)
+        {
+            content[ (base + i) % 6].branch = b[(hour/2 + i) % 6];
+        }
+
+        int start = (month + day) % 6;
+        content[start].star = star[2];
+        for(i = 0; i < 5; i++)
+        {
+            content[ (start + i) % 6].star = star[(2+i) % 6];
+        }
 
 
         finish();
