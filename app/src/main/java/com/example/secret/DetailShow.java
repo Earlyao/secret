@@ -12,12 +12,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 class Secret<String> {
-
     String sec;
     Secret<String> birth;
     Secret<String> hurt;
-    public String palace;
-    public String animal;
+    public java.lang.String palace;
+    public java.lang.String animal;
     public int branch_num;
     public ArrayList<String> branch;
 }
@@ -38,7 +37,7 @@ class Group{
     public int id;
 
 
-    public Animals animal;
+    public String animal;
     public String star;
     public Branch branch;
     public String palace;
@@ -162,9 +161,14 @@ public class DetailShow extends AppCompatActivity {
         int base = self % 6;
         content[base].B = "自身";
         content[base].branch = b[hour/2];
-        for(i = 0; i < 5; i++)
-        {
-            content[ (base + i) % 6].branch = b[(hour/2 + i) % 6];
+        for(i = 0; i < 5; i++) {
+            content[(base + i) % 6].branch = b[(hour / 2 + i) % 6];
+            for (int j = 0; j < 5; j++) {
+                if (s[j].branch.contains(content[(base + i) % 6].branch.bra)) {
+                    content[(base + i) % 6].animal = s[j].animal;
+                    content[(base + i) % 6].palace = s[j].palace;
+                }
+            }
         }
 
         int start = (month + day) % 6;
@@ -173,6 +177,8 @@ public class DetailShow extends AppCompatActivity {
         {
             content[ (start + i) % 6].star = star[(2+i) % 6];
         }
+        content[ (start + i) % 6].star ="天空";
+
 
 
         finish();
