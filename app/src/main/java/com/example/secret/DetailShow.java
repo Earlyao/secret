@@ -35,8 +35,6 @@ class Animals<String>{
 class Group{
 
     public int id;
-
-
     public String animal;
     public String star;
     public Branch branch;
@@ -66,12 +64,27 @@ public class DetailShow extends AppCompatActivity {
         Toast toast;
         int i;
 
-        Group group[] = new Group[6];
+        Bundle bundle = new Bundle();
+        bundle = this.getIntent().getExtras();
+        Boolean sex = bundle.getBoolean("sex");
+        int month = bundle.getInt("month");
+        int day = bundle.getInt("day");
+        int hour = bundle.getInt("hour");
+
+        Group content[] = new Group[6];
         for( i =0; i < 6; i++){
-            group[i].id = i;
+            content[i] = new Group();
+            content[i].branch = new Branch();
+            content[i].id = i;
         }
 
         Secret s[] = new Secret[5];
+        for(i = 0; i < 5; i ++) {
+            s[i] = new Secret();
+            s[i].birth = new Secret();
+            s[i].hurt = new Secret();
+            s[i].branch = new ArrayList();
+        }
 
         for(i = 0; i < 5; i ++) {
             s[i].sec = secr[i];
@@ -131,18 +144,13 @@ public class DetailShow extends AppCompatActivity {
             }
         }
 
-        Bundle bundle = new Bundle();
-        bundle = this.getIntent().getExtras();
-        Boolean sex = bundle.getBoolean("sex");
-        int month = bundle.getInt("month");
-        int day = bundle.getInt("day");
-        int hour = bundle.getInt("hour");
-
         Branch b[] = new Branch[6];
         if((hour %2) == 0)
         {
             for( i = 0; i < 6; i++)
             {
+                b[i] = new Branch();
+                b[i].next = new Branch();
                 b[i].bra = branch2[i];
                 b[i].next.bra = branch2[(i+1)%6];
             }
@@ -156,7 +164,6 @@ public class DetailShow extends AppCompatActivity {
             }
         }
 
-        Group content[] = new Group[6];
         int self = month + day + hour;
         int base = self % 6;
         content[base].B = "自身";
@@ -181,7 +188,7 @@ public class DetailShow extends AppCompatActivity {
 
 
 
-        finish();
+       // finish();
 
 
     }
