@@ -178,6 +178,12 @@ public class DetailShow extends AppCompatActivity {
             }
         }
 
+        for(i = 0; i < 6; i++){
+            if(content[i].palace.isEmpty()){
+                content[i].palace = palas[5];
+            }
+        }
+
         int start = (month + day) % 6;
         content[start].star = star[2];
         for(i = 0; i < 5; i++)
@@ -192,6 +198,7 @@ public class DetailShow extends AppCompatActivity {
                 center.sec = s[i].sec;
             }
         }
+
         for(i = 0; i < 5 ; i++){
             //生我
             if(s[i].birth.sec == center.sec){
@@ -202,9 +209,11 @@ public class DetailShow extends AppCompatActivity {
                     if(content[j].palace == s[i].palace){
                         content[j].C = "母亲";
                     }
+                    if(s[i].branch.contains(content[j].branch)){
+                        content[j].B = "贵人";
+                    }
                 }
             }
-
             //同我
             if(s[i].sec == center.sec){
                 for(int j = 0; j < 6; j++) {
@@ -214,15 +223,80 @@ public class DetailShow extends AppCompatActivity {
                     if(content[j].palace == s[i].palace){
                         content[j].C = "姐妹";
                     }
+                    if(center.sec != s[4]){
+                        if(s[i].branch.contains(content[j].branch)){
+                            content[j].B ="朋友";
+                        }
+                    }
+                }
+            }
+
+            //生星
+            if(center.birth.sec == s[i].sec) {
+                for (int j = 0; j < 6; j++) {
+                    if (content[j].star == star[i]) {
+                        content[j].A = "儿子";
+                    }
+                }
+            }
+
+            //星克
+            if(s[i].hurt.sec == center.sec){
+                for (int j = 0; j < 6; j++) {
+                    if (content[j].star == star[i]) {
+                        content[j].A = "偏职";
+                    }
+                    if(content[j].palace == s[i].palace){
+                        content[j].C = "正职";
+                    }
+                    if(sex){
+                        if(s[i].branch.contains(content[j].branch)){
+                            content[j].B = "小人";
+                        }
+                    }
                 }
             }
 
 
-
         }
 
+        //克我和我克支
+        if(sex)
+        {
+            //if(center.hurt.sec == s[i].sec){
+                for(int j = 0; j < 6; j++) {
+                    if(center.branch.contains(content[j].branch)){
+                        content[j].B = "妻子";
+                    }
+                }
+            //}
+        }else {
+           // if(s[i].hurt.sec == center.sec){
+                for(int j = 0; j < 6; j++) {
+                    if(center.branch.contains(content[j].branch)){
+                        content[j].B = "丈夫";
+                    }
+                    if(center.hurt.branch.contains(content[j].branch)){
+                        content[j].B = "小人";
+                    }
+                }
+           // }
+        }
 
-       // finish();
+        //生宫
+       // if(center.birth.palace == s[i].palace){
+            for (int j = 0; j < 6; j++){
+                if(content[j].palace == center.birth.palace){
+                    content[j].C = "女儿";
+                }
+                if(center.birth.branch.contains(content[j].branch)){
+                    content[j].B = "疾病";
+                }
+
+
+            }
+       // }
+
 
 
     }
