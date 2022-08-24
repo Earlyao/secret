@@ -157,7 +157,7 @@ public class DetailShow extends AppCompatActivity {
         }
         else
         {
-            for( i = 0; i < 6; i++)
+            for( i = 0; i < 6; i += 2)
             {
                 b[i].bra = branch1[i];
                 b[i].next.bra = branch1[(i+1)%6];
@@ -186,6 +186,40 @@ public class DetailShow extends AppCompatActivity {
         }
         content[ (start + i) % 6].star ="天空";
 
+        Secret center = new Secret();
+        for(i = 0; i < 5; i++){
+            if(s[i].branch.contains(content[base].branch)){
+                center.sec = s[i].sec;
+            }
+        }
+        for(i = 0; i < 5 ; i++){
+            //生我
+            if(s[i].birth.sec == center.sec){
+                for(int j = 0; j < 6; j++) {
+                    if (content[j].star == star[i]) {
+                        content[j].A = "父亲";
+                    }
+                    if(content[j].palace == s[i].palace){
+                        content[j].C = "母亲";
+                    }
+                }
+            }
+
+            //同我
+            if(s[i].sec == center.sec){
+                for(int j = 0; j < 6; j++) {
+                    if (content[j].star == star[i]) {
+                        content[j].A = "兄弟";
+                    }
+                    if(content[j].palace == s[i].palace){
+                        content[j].C = "姐妹";
+                    }
+                }
+            }
+
+
+
+        }
 
 
        // finish();
