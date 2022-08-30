@@ -209,7 +209,7 @@ public class DetailShow extends AppCompatActivity {
                     if(content[j].palace == s[i].palace){
                         content[j].C = "母亲";
                     }
-                    if(s[i].branch.contains(content[j].branch)){
+                    if(s[i].branch.contains(content[j].branch) && center.sec != "金"){
                         content[j].B = "贵人";
                     }
                 }
@@ -222,11 +222,6 @@ public class DetailShow extends AppCompatActivity {
                     }
                     if(content[j].palace == s[i].palace){
                         content[j].C = "姐妹";
-                    }
-                    if(center.sec != s[4]){
-                        if(s[i].branch.contains(content[j].branch)){
-                            content[j].B ="朋友";
-                        }
                     }
                 }
             }
@@ -249,11 +244,6 @@ public class DetailShow extends AppCompatActivity {
                     if(content[j].palace == s[i].palace){
                         content[j].C = "正职";
                     }
-                    if(sex){
-                        if(s[i].branch.contains(content[j].branch)){
-                            content[j].B = "小人";
-                        }
-                    }
                 }
             }
 
@@ -264,16 +254,32 @@ public class DetailShow extends AppCompatActivity {
         if(sex)
         {
             //if(center.hurt.sec == s[i].sec){
-                for(int j = 0; j < 6; j++) {
-                    if(center.branch.contains(content[j].branch)){
+            for(i=0; i<5; i++)
+            {
+                if(s[i].hurt.branch.contains(center.branch) && i != 2){
+                    break;
+                }
+            }
+             for(int j = 0; j < 6; j++) {
+                    if(center.hurt.branch.contains(content[j].branch) && center.sec != "木"){
                         content[j].B = "妻子";
                     }
+                 if(s[i].branch.contains(content[j].branch) && i <5){
+                     content[j].B = "小人";
+                 }
                 }
             //}
         }else {
            // if(s[i].hurt.sec == center.sec){
+                for(i=0; i<5; i++)
+                {
+                    if(s[i].hurt.branch.contains(center.branch) && i != 2){
+                        break;
+                    }
+                }
                 for(int j = 0; j < 6; j++) {
-                    if(center.branch.contains(content[j].branch)){
+
+                    if(s[i].branch.contains(content[j].branch) && i <5){
                         content[j].B = "丈夫";
                     }
                     if(center.hurt.branch.contains(content[j].branch)){
@@ -285,17 +291,122 @@ public class DetailShow extends AppCompatActivity {
 
         //生宫
        // if(center.birth.palace == s[i].palace){
-            for (int j = 0; j < 6; j++){
+        for (int j = 0; j < 6; j++){
                 if(content[j].palace == center.birth.palace){
                     content[j].C = "女儿";
                 }
-                if(center.birth.branch.contains(content[j].branch)){
+                if(center.birth.branch.contains(content[j].branch) && center.sec != "火"){
                     content[j].B = "疾病";
                 }
 
 
             }
-       // }
+        if(center.sec == "金"){
+                if(hour % 2 == 0){
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "戌"){
+                            content[j].B = "朋友";
+                        }
+                        if(content[j].branch.bra == "辰"){
+                            content[j].B = "贵人";
+                        }
+                    }
+                }else {
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "丑"){
+                            content[j].B = "朋友";
+                        }
+                        if(content[j].branch.bra == "未"){
+                            content[j].B = "贵人";
+                        }
+                    }
+                }
+
+        }else if(center.sec == "水"){
+                if(hour % 2 == 0){
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "戌"){
+                            if(sex)
+                                content[j].B = "小人";
+                            else
+                                content[j].B ="丈夫";
+                        }
+                        if(content[j].branch.bra == "辰"){
+                            content[j].B = "朋友";
+                        }
+                    }
+                }else {
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "丑"){
+                            content[j].B = "朋友";
+                        }
+                        if(content[j].branch.bra == "未"){
+                            if(sex)
+                                content[j].B = "小人";
+                            else
+                                content[j].B ="丈夫";
+                        }
+                    }
+                }
+        } else if(center.sec == "木"){
+            if(hour % 2 == 0){
+                for(int j =0; j < 6 ; j++){
+                    if(content[j].branch.bra == "戌"){
+                        if(sex)
+                            content[j].B = "妻子";
+                        else
+                            content[j].B ="小人";
+                    }
+                    if(content[j].branch.bra == "辰"){
+                        content[j].B = "朋友";
+                    }
+                }
+            }else {
+                for(int j =0; j < 6 ; j++){
+                    if(content[j].branch.bra == "未"){
+                        content[j].B = "朋友";
+                    }
+                    if(content[j].branch.bra == "丑"){
+                        if(sex)
+                            content[j].B = "妻子";
+                        else
+                            content[j].B ="小人";
+                    }
+                }
+            }
+        }
+        else if(center.sec == "火"){
+                if(hour % 2 == 0){
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "辰"){
+                            content[j].B ="疾病";
+                        }
+                        if(content[j].branch.bra == "戌"){
+                            content[j].B = "朋友";
+                        }
+                    }
+                }else {
+                    for(int j =0; j < 6 ; j++){
+                        if(content[j].branch.bra == "未"){
+                            content[j].B = "朋友";
+                        }
+                        if(content[j].branch.bra == "丑"){
+                            content[j].B ="疾病";
+                        }
+                    }
+                }
+        }
+        else {
+            for (i = 0; i < 5; i++) {
+                if (s[i].branch.contains(center.branch))
+                    break;
+            }
+            for (int j = 0; j < 6; j++) {
+                if (content[i].branch.bra != center.branch && s[i].branch.contains(content[i].branch)) {
+                    content[i].B = "朋友";
+                }
+            }
+        }
 
 
 
