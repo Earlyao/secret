@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -178,11 +179,11 @@ public class DetailShow extends AppCompatActivity {
             }
         }
 
-        for(i = 0; i < 6; i++){
-            if(content[i].palace.isEmpty()){
+        //for(i = 0; i < 6; i++){
+        //    if(content[i].palace.isEmpty()){
                 content[i].palace = palas[5];
-            }
-        }
+        //    }
+       // }
 
         int start = (month + day) % 6;
         content[start].star = star[2];
@@ -195,7 +196,8 @@ public class DetailShow extends AppCompatActivity {
         Secret center = new Secret();
         for(i = 0; i < 5; i++){
             if(s[i].branch.contains(content[base].branch)){
-                center.sec = s[i].sec;
+                //center.sec = s[i].sec;
+                center = s[i];
             }
         }
 
@@ -407,8 +409,15 @@ public class DetailShow extends AppCompatActivity {
                 }
             }
         }
+        EditText ed = (EditText) findViewById(R.id.animal0);
+        ed.setText("hahha");
 
-
+        for(i =0; i < 6; i++){
+            for(int j = 0; j < 6; j++){
+               // EditText ed = (EditText) findViewById(R.id.animal0);
+              //  ed.setText("hahha");
+            }
+        }
 
     }
 }
